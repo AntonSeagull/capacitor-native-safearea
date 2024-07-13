@@ -1,6 +1,6 @@
 {
   "name": "capacitor-native-safearea",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Capacitor plugin that adds native Safe Area support for iOS applications, ensuring your app's content is displayed correctly within the safe areas of the device screen.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
