@@ -10,7 +10,7 @@ public class CapSafeAreaPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "CapSafeAreaPlugin"
     public let jsName = "CapSafeArea"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "showTopSafeArea", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "showTopSafeArea", returnType: CAPPluginReturnPromise),
          CAPPluginMethod(name: "showBottomSafeArea", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = CapSafeArea()
