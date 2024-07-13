@@ -17,7 +17,9 @@ public class CapSafeAreaPlugin: CAPPlugin, CAPBridgedPlugin {
 
    
      
-    @objc func showTopSafeArea(color: String) {
+    @objc func showTopSafeArea(_ call: CAPPluginCall) {
+          let color = call.getString("color") ?? "#FFFFFF"
+        
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.keyWindow else { return }
 
@@ -33,9 +35,11 @@ public class CapSafeAreaPlugin: CAPPlugin, CAPBridgedPlugin {
                 topSafeAreaView.bottomAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor)
             ])
         }
+        call.resolve()
     }
 
-    @objc func showBottomSafeArea(color: String) {
+    @objc func showBottomSafeArea(_ call: CAPPluginCall) {
+        let color = call.getString("color") ?? "#FFFFFF"
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.keyWindow else { return }
 
@@ -51,6 +55,7 @@ public class CapSafeAreaPlugin: CAPPlugin, CAPBridgedPlugin {
                 bottomSafeAreaView.bottomAnchor.constraint(equalTo: window.bottomAnchor)
             ])
         }
+        call.resolve()
     }
 }
 
