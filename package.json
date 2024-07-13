@@ -1,6 +1,6 @@
 {
   "name": "capacitor-native-safearea",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Capacitor plugin that adds native Safe Area support for iOS applications, ensuring your app's content is displayed correctly within the safe areas of the device screen.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -46,10 +46,10 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "^6.0.0",
-    "@capacitor/core": "^6.0.0",
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
     "@capacitor/docgen": "^0.2.2",
-    "@capacitor/ios": "^6.0.0",
+    "@capacitor/ios": "^5.0.0",
     "@ionic/eslint-config": "^0.4.0",
     "@ionic/prettier-config": "^1.0.1",
     "@ionic/swiftlint-config": "^1.1.2",

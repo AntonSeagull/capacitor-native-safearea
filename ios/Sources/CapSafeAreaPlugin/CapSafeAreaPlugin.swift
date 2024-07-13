@@ -10,17 +10,12 @@ public class CapSafeAreaPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "CapSafeAreaPlugin"
     public let jsName = "CapSafeArea"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "showTopSafeArea", returnType: CAPPluginReturnPromise)
+         CAPPluginMethod(name: "showBottomSafeArea", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = CapSafeArea()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
-
+   
      
     @objc func showTopSafeArea(color: String) {
         DispatchQueue.main.async {
